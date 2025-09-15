@@ -85,7 +85,7 @@ function Blog() {
     if (loading) return <p>Loading...</p>;
 
     return (
-        <div>
+        <div className="blog-container">
             <Nav />
             <ul className="blogs-list">
                 {blogs.map(blog => {
