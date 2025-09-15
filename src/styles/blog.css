@@ -1,26 +1,221 @@
-.container {
+ul {
     list-style: none;
-    outline: 1px solid black;
+}
+
+.blogs-list {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 30px;
 }
 
 .blog {
-    outline: 1px solid red;
-    padding: 10px;
-    width: 50%;
-
+    margin-top: 50px;
+    /* outline: 1px solid blue; */
+    padding: 30px;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 100px auto;
+    grid-template-rows: auto auto;
+    gap: 10px;
+
+    width: 60%;
 }
 
-.title {
-
+.blog-content {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 50px minmax(100px, auto);
 }
 
-.content {
+.text {
+    border-left: 1px solid rgb(204, 204, 204);
+    border-right: 1px solid rgb(204, 204, 204);
+    border-top: none;
+    border-bottom: 1px solid rgb(204, 204, 204);
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 1.3rem;
+
+    border: 1px solid rgb(204, 204, 204);
+    background-color: rgb(32, 44, 75);
+    color: white;
+}
+
+.info > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.text {
+    padding: 10px;
+}
+
+.comments-tab {
+    /* border-radius: 10px; */
+    border: 1px solid rgb(204, 204, 204);
+    cursor: pointer;
+    background-color: rgb(242, 242, 242);
+}
+
+.comments-container {
+    border: 1px solid rgb(204, 204, 204);
+    border-top: none;
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 400px;
+}
+
+.comment {
+    padding-left: 20px;
+    display: flex;
+
+    gap: 10px;
+}
+
+.no-comments {
+    align-self: center;
+}
+
+.comments-list {
+    /* border: 1px solid blue; */
+    /* flex: 1;
+    overflow-y: auto; */
+    display: flex;
+    flex-direction: column;
+
+    height: 350px;
     
+}
+
+.add-comment {
+    /* border: 1px solid red; */
+    padding: 5px;
+    flex-shrink: 0;
+}
+
+.add-comment input {
+    width: 80%;
+    height: 25px;
+
+    padding: 5px;
+}
+
+.add-comment  button {
+    height: 35px;
+    width: 17%;
+
+    background-color: rgb(5, 197, 5);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-comment  button:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid gray;
+}
+.down-arrow {
+    width: 30px;
+    height: 30px;
+}
+
+.tab-open, .tab-closed {
+    height: 50px;
+    cursor: pointer;
+}
+
+/* modal */
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    height: 350px;
+    width: 450px;
+    padding: 30px;
+}
+
+.modal > form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal > form textarea {
+    height: 200px;
+}
+
+/* Nav bar */
+
+nav {
+    border: 1px solid black;
+    position: fixed;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    top: 0;
+    left: 0;
+
+    height: 80px;
+    width: 100%;
+
+    background-color: rgb(32, 44, 75);
+}
+
+nav h1 {
+    color: white;
+    margin-left: 30px;
+}
+
+nav button {
+    border: none;
+    background-color: rgb(32, 44, 75);
+    color: white;
+    padding: 25px;
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+nav button:hover,
+.pagination button:hover {
+    background-color: rgb(60, 86, 150);
+
+}
+
+.nav-buttons {
+    display: flex;
+}
+
+/* Pagination buttons */
+
+
+.pagination {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.pagination button {
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(32, 44, 75);
+    color: white;
 }
