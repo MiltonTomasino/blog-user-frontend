@@ -1,6 +1,7 @@
 import './App.css';
 import Blog from './components/blog';
 import Login from './components/login';
+import Register from './components/Register';
 import { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import ProtectedRoute from './components/ProtectedRoute';
@@ -37,6 +38,8 @@ function App() {
           } />
 
           <Route path='/login' element={<Login />} />
+
+          <Route path='/register' element={<Register />} />
 
           <Route path='/blog' element={
             <ProtectedRoute isAuth={isAuth} >

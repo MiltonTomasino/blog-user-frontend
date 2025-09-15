@@ -88,7 +88,7 @@ function Blog() {
         <div className="blog-container">
             <Nav />
             <ul className="blogs-list">
-                {blogs.map(blog => {
+                {blogs.length > 0 ? blogs.map(blog => {
                     blog = formatDate(blog);
                     const isOpen = !!openComments[blog.id]
                     return (
@@ -143,7 +143,9 @@ function Blog() {
 
                         </li>
                     )
-                })}
+                }) : 
+                    <div>No blogs</div>
+                }
             </ul>
             <Pagination
                 currentPage={currentPage}
